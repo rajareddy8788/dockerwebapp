@@ -9,6 +9,8 @@ services:
       replicas: 3
     networks:
       - mynetwork
+    volumes:
+      - raja:/opt/rajareddy
 
   application:
     image: raja8788/webapp
@@ -24,3 +26,5 @@ services:
 networks:
   mynetwork:
     driver: overlay
+volumes:
+  raja:
